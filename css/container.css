@@ -1,16 +1,8 @@
 .container {
     display: grid;
-    justify-items: start;
     border: 1px solid #bdbcbc;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 10px;
     background-color: #fff;
     max-width: 800px;
 }
-
-.container__item {
-    display: grid;
-    gap: 10px;
-    
-}
-
