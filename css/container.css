@@ -6,3 +6,11 @@
     background-color: #fff;
     max-width: 800px;
 }
+
+.container__header {
+    font-size: x-large;
+    font-weight: 800;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdbcbc;
+}
