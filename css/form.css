@@ -1,20 +1,18 @@
 .form {
-    display: grid;
+    display: flex;
     gap: 20px;
+    
 }
 
-.form__header {
-    font-size: x-large;
-    font-weight: 800;
-    margin-top: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #bdbcbc;
+@media (max-width: 500px) {
+    .form {
+        flex-direction: column;
+    }
 }
 
 .form__input {
     padding: 10px;
     border: 1px solid #bdbcbc;
-    margin-bottom: 10px;
 }
 
 .form__button {
@@ -22,8 +20,9 @@
     background-color: teal;
     padding: 10px;
     border: 1px solid #bdbcbc;
+    cursor: pointer;
 }
 
-.form__button:active {
+.form__button:hover {
     border: 1px solid black;
 }
