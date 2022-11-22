@@ -1,7 +1,6 @@
 .form {
     display: flex;
     gap: 20px;
-    
 }
 
 @media (max-width: 500px) {
@@ -13,6 +12,8 @@
 .form__input {
     padding: 10px;
     border: 1px solid #bdbcbc;
+    flex-grow: 1;
+    margin: 20px;
 }
 
 .form__button {
@@ -21,6 +22,7 @@
     padding: 10px;
     border: 1px solid #bdbcbc;
     cursor: pointer;
+    margin: 20px;
 }
 
 .form__button:hover {
