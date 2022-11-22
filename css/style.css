@@ -12,6 +12,15 @@ body {
     padding: 10px;
 }
 
+.header {
+    font-size:xx-large;
+    font-weight: 900;
+    display: grid;
+    justify-items: start;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 .list__item--done {
     text-decoration: line-through;
 }
