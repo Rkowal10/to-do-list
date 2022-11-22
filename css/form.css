@@ -13,7 +13,6 @@
     padding: 10px;
     border: 1px solid #bdbcbc;
     flex-grow: 1;
-    margin: 20px;
 }
 
 .form__button {
@@ -22,7 +21,6 @@
     padding: 10px;
     border: 1px solid #bdbcbc;
     cursor: pointer;
-    margin: 20px;
 }
 
 .form__button:hover {
