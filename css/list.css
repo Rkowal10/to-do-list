@@ -1,0 +1,35 @@
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.list__item {
+    list-style-type: none;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    word-break: break-all;
+}
+
+.list__item--done {
+    text-decoration: line-through;
+}
+
+.buttonDone {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: green;
+}
+
+.buttonRemove {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: red;
+}

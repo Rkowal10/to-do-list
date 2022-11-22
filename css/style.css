@@ -20,7 +20,3 @@ body {
     margin: 0 auto;
     max-width: 800px;
 }
-
-.list__item--done {
-    text-decoration: line-through;
-}
