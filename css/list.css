@@ -1,11 +1,11 @@
 .list {
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .list__item {
-    list-style-type: none;
-    text-align: center;
+    border-bottom: 1px solid #bdbcbc;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 .buttonDone {
-    align-self: center;
+    cursor: pointer;
     width: 25px;
     height: 25px;
     border: none;
@@ -27,7 +27,7 @@
 }
 
 .buttonRemove {
-    align-self: center;
+    cursor: pointer;
     width: 25px;
     height: 25px;
     border: none;
