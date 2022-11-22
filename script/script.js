@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        {
-            content: "zjeść śnaidanie",
-            done: true,
-        },
-        {
-            content: "umyć naczynia",
-            done: false,
-        },
-    ];
+    const tasks = [];
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -34,9 +25,9 @@
         for (const task of tasks) {
             htmlString += `
             <li class="list__item${task.done ? " list__item--done" : ""}">
-                <button class="js-done">Zrobione</button>
-                <button class="js-remove">Usuń</button>
-               ${task.content} 
+                <button class="buttonDone js-done"></button>
+                ${task.content} 
+                <button class="buttonRemove js-remove"></button>
             </li>
             `;
         }
@@ -44,6 +35,11 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
         bindEvents();
+    };
+
+    const clearInput = (taskContent) => {
+        taskContent.value = "";
+        taskContent.focus();
     };
 
     const addNewTask = (newTaskContent) => {
@@ -67,6 +63,7 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
+        const taskContent = document.querySelector(".js-newTask");
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
@@ -74,6 +71,7 @@
         }
 
         addNewTask(newTaskContent);
+        clearInput(taskContent);
     };
 
     const init = () => {
