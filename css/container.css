@@ -4,6 +4,7 @@
     margin: 10px auto;
     background-color: #fff;
     max-width: 800px;
+    padding: 20px;
 }
 
 .container__header {
@@ -11,5 +12,5 @@
     font-weight: 800;
     margin-top: 0;
     padding: 10px;
-    border-bottom: 1px solid #bdbcbc;
+    border-bottom: 2px solid #bdbcbc;
 }
