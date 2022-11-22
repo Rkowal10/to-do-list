@@ -27,7 +27,7 @@
             <li class="list__item${task.done ? " list__item--done" : ""}">
                 <button class="buttonDone js-done"></button>
                 ${task.content} 
-                <button class="buttonRemove js-remove"></button>
+                <button class="buttonRemove js-remove">❌</button>
             </li>
             `;
         }
@@ -67,6 +67,7 @@
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
         if (newTaskContent === "") {
+            taskContent.focus();
             return;
         }
 
