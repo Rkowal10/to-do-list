@@ -11,7 +11,6 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
-    <link href="css/header.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <script defer src="script/script.js"></script>
     <title>To-do list</title>
@@ -19,17 +18,18 @@
 
 <body>
     <h1 class="header">Lista zadań</h1>
-        <div class="container">
-            <form class="form js-form">
-                <h2 class="form__header">Dodaj nowe zadanie</h2>
-                    <input class="form__input js-newTask" placeholder="Co masz do zrobienia?" autofocus>
-                    <button class="form__button">Dodaj zadanie</button>
-            </form>
-        </div>
-        <div class="container">Lista zadań
-            <ul class="js-tasks">
-            </ul>
-        </div>
+    <div class="container">
+        <p class="container__header">Dodaj nowe zadanie</p>
+        <form class="form js-form">
+            <input class="form__input js-newTask" placeholder="Co masz do zrobienia?" autofocus>
+            <button class="form__button">Dodaj zadanie</button>
+        </form>
+    </div>
+    <div class="container">
+        <p class="container__header">Lista zadań</p>
+        <ul class="js-tasks">
+        </ul>
+    </div>
 </body>
 
 </html>
