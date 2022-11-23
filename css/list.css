@@ -14,22 +14,21 @@
     word-break: break-all;
 }
 
-.list__item--done {
+.list__task--done {
     text-decoration: line-through;
 }
 
-.buttonDone {
+.list__button {
     cursor: pointer;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
+}
+
+.list__button--done {
     background-color: green;
 }
 
-.buttonRemove {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    border: none;
+.list__button--remove {
     background-color: red;
 }
