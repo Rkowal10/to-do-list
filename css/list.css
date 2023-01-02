@@ -24,12 +24,21 @@
     height: 30px;
     border: none;
     padding: 0;
+    transition: 1s;
 }
 
 .list__button--done {
-    background-color: green;
+    background-color: hsl(120, 100%, 25%);
+}
+
+.list__button--done:hover {
+    background-color: hsl(120, 100%, 35%);
 }
 
 .list__button--remove {
-    background-color: red;
+    background-color: hsl(0, 100%, 50%);
+}
+
+.list__button--remove:hover {
+    background-color: hsl(0, 100%, 70%);
 }
