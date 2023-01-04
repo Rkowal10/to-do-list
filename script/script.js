@@ -49,8 +49,16 @@
 
         buttonsElement.innerHTML = `
         <button class="container__buttons">Ukryj zaznaczone</button>
-        <button class="container__buttons">Zaznacz wszystkie</button>
+        <button class="container__buttons js-doneAllTasks">Ukończ wszystkie</button>
         `
+    };
+
+    const buttonsEvents = () => {
+        const markAllTasksDoneButton = document.querySelector(".js-doneAllTasks");
+
+        if (markAllTasksDoneButton) {
+            markAllTasksDoneButton.addEventListener("click", markAllTasksDone)
+        }
     };
 
     const render = () => {
@@ -58,6 +66,7 @@
         renderButtons();
         bindRemoveEvents();
         bindtoggleDoneEvents();
+        buttonsEvents();
     };
 
     const clearInput = (taskContent) => {
@@ -91,6 +100,15 @@
             { ...tasks[taskIndex], done: !tasks[taskIndex].done },
             ...tasks.slice(taskIndex + 1, tasksLenght),
         ];
+        render();
+    };
+
+    const markAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+
         render();
     };
 
