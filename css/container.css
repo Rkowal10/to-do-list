@@ -28,7 +28,7 @@
     border: none;
     color: teal;
     cursor: pointer;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 @media (max-width: 767px) {
