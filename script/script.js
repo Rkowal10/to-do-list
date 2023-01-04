@@ -1,7 +1,7 @@
 {
     let tasks = [];
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -9,7 +9,9 @@
                 removeTask(index);
             });
         });
+    };
 
+    const bindtoggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -19,11 +21,11 @@
         });
     };
 
-    const render = () => {
-        let htmlString = "";
+    const renderTasks = () => {
+        let tasksToString = "";
 
         for (const task of tasks) {
-            htmlString += `
+            tasksToString += `
             <li class="list__item">
                 <button class="list__button list__button--done js-done">
                     ${task.done ? "✔️" : ""}
@@ -34,10 +36,28 @@
             </li>
             `;
         }
+        document.querySelector(".js-tasks").innerHTML = tasksToString;
+    };
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+    const renderButtons = () => {
+        const buttonsElement = document.querySelector(".js-buttons");
 
-        bindEvents();
+        if (tasks.length === 0) {
+            buttonsElement.innerHTML = "";
+            return;
+        }
+
+        buttonsElement.innerHTML = `
+        <button class="container__buttons">Ukryj zaznaczone</button>
+        <button class="container__buttons">Zaznacz wszystkie</button>
+        `
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
+        bindRemoveEvents();
+        bindtoggleDoneEvents();
     };
 
     const clearInput = (taskContent) => {
