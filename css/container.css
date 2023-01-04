@@ -1,5 +1,4 @@
-.container {
-    display: grid;
+.container {   
     border: 1px solid #bdbcbc;
     margin: 10px auto;
     background-color: #fff;
@@ -7,10 +6,37 @@
     padding: 20px;
 }
 
+.container--tasks {
+    display: grid;   
+    grid-template-columns: 2fr 1fr;
+    margin: 10px auto;
+    background-color: #fff;
+    max-width: 800px;
+    border-bottom: 2px solid #bdbcbc;
+}
+
 .container__header {
     font-size: x-large;
     font-weight: 800;
     margin-top: 0;
     padding: 10px;
-    border-bottom: 2px solid #bdbcbc;
+}
+
+.container__buttons {
+    margin-top: 0;
+    padding: 10px;
+    border: none;
+    color: teal;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+@media (max-width: 767px) {
+    .container--tasks {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .container__buttons {
+        justify-items: center;
+    }
 }
