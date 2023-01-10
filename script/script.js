@@ -25,7 +25,7 @@
     const renderTasks = () => {
         const tasksToString = task =>`
             <li class="list__item${task.done && hideDoneTasks ? "list__item--hidden" : ""}
-             js-task">
+             ">
                 <button class="list__button list__button--done js-done">
                     ${task.done ? "✔️" : ""}
                 </button>
