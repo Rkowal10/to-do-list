@@ -28,7 +28,7 @@
         for (const task of tasks) {
             tasksToString += `
             <li class="list__item${task.done && hideDoneTasks ? "list__item--hidden" : ""}
-            ">
+             ">
                 <button class="list__button list__button--done js-done">
                     ${task.done ? "✔️" : ""}
                 </button>

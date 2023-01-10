@@ -27,7 +27,4 @@
         grid-template-columns: 1fr;
         justify-items: center;
     }
-    .container__buttons {
-        justify-items: center;
-    }
 }
