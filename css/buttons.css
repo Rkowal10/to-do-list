@@ -1,0 +1,19 @@
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.buttons__button {
+    margin-top: 0;
+    padding: 10px;
+    border: none;
+    color: hsl(180, 100%, 25%);
+    cursor: pointer;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.container__buttons:hover {
+    color: hsl(180, 100%, 35%);
+}
