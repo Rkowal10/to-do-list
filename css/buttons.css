@@ -1,7 +1,13 @@
 .buttons {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .buttons {
+        justify-content: center;
+    }
 }
 
 .buttons__button {
@@ -11,9 +17,13 @@
     color: hsl(180, 100%, 25%);
     cursor: pointer;
     background-color: transparent;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-.container__buttons:hover {
+.buttons__button:hover {
     color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    color: #808080;
 }
