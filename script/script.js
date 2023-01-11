@@ -23,8 +23,9 @@
     };
 
     const renderTasks = () => {
-        const tasksToString = task =>`
-            <li class="list__item${task.done && hideDoneTasks ? "list__item--hidden" : ""}
+        const tasksToString = task => `
+            <li class=
+                "list__item${ task.done && hideDoneTasks ? " list__item--hidden" : ""}
              ">
                 <button class="list__button list__button--done js-done">
                     ${task.done ? "✔️" : ""}
@@ -48,10 +49,12 @@
 
         buttonsElement.innerHTML = `
         <button class="buttons__button js-toggleHideDoneTasks">
-        ${hideDoneTasks ? "Pokaż" : "Ukryj"} zakończone</button>
-        <button class="buttons__button js-doneAllTasks
-        ${tasks.every(({done}) => done) ? "disabled" : ""}
-        ">Ukończ wszystkie</button>
+            ${hideDoneTasks ? "Pokaż" : "Ukryj"} zakończone
+        </button>
+        <button class="buttons__button js-doneAllTasks"
+            ${ tasks.every(({done}) => done) ? "disabled" : ""}
+            >Ukończ wszystkie
+        </button>
         `
     };
 
