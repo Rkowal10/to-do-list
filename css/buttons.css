@@ -25,5 +25,5 @@
 }
 
 .buttons__button:disabled {
-    color: #808080;
+    color: #000000;
 }
