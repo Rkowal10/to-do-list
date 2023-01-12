@@ -68,7 +68,7 @@
         const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneTasks");
 
         if (toggleHideDoneTasksButton) {
-            toggleHideDoneTasksButton.addEventListener("clik", toggleHideDoneTasks);
+            toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
         }
     };
 
