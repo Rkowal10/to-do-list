@@ -5,6 +5,7 @@
 
 @media (max-width: 767px) {
     .buttons {
+        flex-direction: column;
         justify-content: center;
     }
 }
