@@ -1,4 +1,4 @@
-.container {   
+.section {   
     border: 1px solid #bdbcbc;
     margin: 10px auto;
     background-color: #fff;
@@ -6,7 +6,7 @@
     padding: 20px;
 }
 
-.container--tasks {
+.section__header {
     display: grid;   
     grid-template-columns: 1fr auto;
     margin: 10px auto;
@@ -15,16 +15,16 @@
     border-bottom: 2px solid #bdbcbc;
 }
 
-.container__header {
+.section__title {
     font-size: x-large;
     font-weight: 800;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 10px;
 }
 
 @media (max-width: 767px) {
-    .container--tasks {
+    .section__header {
         grid-template-columns: 1fr;
-        justify-items: center;
     }
 }
