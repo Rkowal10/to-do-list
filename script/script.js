@@ -55,6 +55,9 @@
             ${ tasks.every(({done}) => done) ? "disabled" : ""}
             >Ukończ wszystkie
         </button>
+        <button class="buttons__button js-removeAllTasks"
+            >Usuń wszystkie
+        </button>
         `
     };
 
@@ -69,6 +72,12 @@
 
         if (toggleHideDoneTasksButton) {
             toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
+        }
+
+        const removeAllTasksButton = document.querySelector(".js-removeAllTasks");
+
+        if (removeAllTasksButton) {
+            removeAllTasksButton.addEventListener("click", removeAllTasks);
         }
     };
 
@@ -99,6 +108,14 @@
         tasks = [
             ...tasks.slice(0, taskIndex),
             ...tasks.slice(taskIndex + 1, tasksLenght),
+        ];
+
+        render();
+    };
+
+    const removeAllTasks = () => {
+        tasks = [
+            ...tasks.slice(tasks.length),
         ];
 
         render();
